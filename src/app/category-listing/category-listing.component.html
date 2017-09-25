@@ -1,0 +1,30 @@
+<div class="container">
+
+  <select class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  >
+    <option value="allCategories" selected="selected">All Categories</option>
+    <option value="vehicles">Vehicles</option>
+    <option value="furniture">Furniture</option>
+    <option value="toys">Toys</option>
+    <option value="tools">Tools</option>
+  </select>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Item Type</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let currentCategory of childCategoryList'>
+        <td>{{currentCategory.itemType}}</td>
+        <td>{{currentCategory.name}}</td>
+        <td>{{currentCategory.price}}</td>
+        <td>{{currentCategory.location}}</td>
+        <td><button class="btn">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
